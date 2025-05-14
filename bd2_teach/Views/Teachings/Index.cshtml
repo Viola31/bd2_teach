@@ -1,0 +1,51 @@
+﻿@model IEnumerable<bd2_teach.Models.Teaching>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Teaching</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Hours_)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Discipline.Dis_name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Prof.FullName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Type_load.T_l_name)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Hours_)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Discipline.Dis_name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prof.FullName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Type_load.T_l_name)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.Teaching_id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.Teaching_id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.Teaching_id })
+        </td>
+    </tr>
+}
+
+</table>

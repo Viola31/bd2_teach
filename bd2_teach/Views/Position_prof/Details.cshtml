@@ -1,0 +1,26 @@
+﻿@model bd2_teach.Models.Position_prof
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Position_prof</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Pos_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Pos_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Position_prof_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

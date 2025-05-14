@@ -1,0 +1,50 @@
+﻿@model bd2_teach.Models.Teaching
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Teaching</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Hours_)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Hours_)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Discipline.Dis_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Discipline.Dis_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prof.FullName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prof.FullName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type_load.T_l_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type_load.T_l_name)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Teaching_id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
